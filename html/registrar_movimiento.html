@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navegador.css">
+    <link rel="stylesheet" href="/css/barrasuperior.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/contenido.css">
+    <link rel="stylesheet" href="/css/transacciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="/css/error_message.css">
+    <script src="https://kit.fontawesome.com/06948a739e.js" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <title>registro de movimientos</title>
+</head>
+<body>
+    <div class="transicion-on" onclick="Scroll()"></div>
+    <nav class="nav2">
+      <div class="img1 fas fa-users icons"></div>
+      <br>
+      <div><p >camilo Yepes </p></div>
+          <div class="fas fa-align-justify burger icons " onclick="Scroll()"></div>
+      <br>
+      <br>+
+      <br>
+      <br>
+      <br>
+      <ul class="item" id='item1' onclick="cambio(1)" >parametrizacion</ul>
+      <div  class="block" id="block1">
+       <li><a href="">subitem1</a></li>
+       <li><a href="">subitem1</a></li>
+       <li><a href="">subitem1</a></li>
+       <li><a href="">subitem1</a></li>
+      </div> 
+      <ul class="item" id='item2' onclick="cambio(2)">inventario</ul>
+      <div class="block" id="block2">
+      <li><a href="/html/crear_tercero.html">terceros</a></li>
+      <li><a href="/html/crearproducto.html">productos</a></li>
+      <li><a href="/html/und_medida.html">und medida</a></li>
+      <li><a href="/html/centro_de_costos.html">c. de costos</a></li>
+     </div>
+      <ul class="item" id='item3' onclick="cambio(3)">movimientos</ul>
+      <div class="block" id="block3">
+      <li><a href="">registrar entrada</a></li>
+      <li><a href="">registrar salida</a></li>
+      <li><a href="">subitem3</a></li>
+      <li><a href="">subitem4</a></li>
+     </div>
+      <div class="img2">
+      </div>
+     <br>
+     <ul class="item" id='item4' onclick="cambio(4)">primer item</ul>
+     <div  class="block" id="block4">
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+     </div> 
+     <ul class="item" id='item5' onclick="cambio(5)">segundo item</ul>
+     <div class="block" id="block5">
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+    </div>
+     <ul class="item" id='item6' onclick="cambio(6)">tercer item</ul>
+     <div class="block" id="block6">
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+      <li><a href="">subitem1</a></li>
+    </div>
+     <div class="img2"></div>
+    </nav>
+    <div class="encabezado">
+            <div class="informacion">
+                <p>kardexpress</p>
+                <p id="brtexto2">acermetalicas</p>
+                <p id="brtexto3">23/10/2021</p>
+                <div class="brbtn">
+                <input type="button" value="salir" class="btn btnsalir">
+                </div>
+            </div>
+      </div>
+  <section class="contenido">
+        <div class="box1">       
+      <div class="box2  table_transaccion">
+       <div class="titulo-table_transaccion"> 
+           <h2>transacciones realizadas</h2>
+           <button class="btn btn-pop-upmovimiento1"  id="btn-pop-up">registrar entrada</button>
+           <button class="btn"  id="btn-pop-upmovimiento2">registrar salida</button>
+           <div class="titulotable">
+           <table class="theader">
+            <thead>
+              <tr>
+                <th><h1>tipo</h1></th>
+                <th><h1>identificacion</h1></th>
+                <th><h1>razon social/nombre</h1></th>
+                <th><h1>apellidos</h1></th>
+                <th><h1>direccion</h1></th>
+                <th><h1>telefono1</h1></th>
+                <th><h1>telefono2</h1></th>
+                <th><h1>correo 1</h1></th>
+                <th><h1>correo 2</h1></th>
+                <th><h1>tipo de tercero</h1></th>
+                <th><h1>reservado para mas adelante</h1></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+       </div>
+       <div class="contenido-table_transaccion">
+        <table class="container">
+          <tbody id="tablacontenidoproducto">
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <form id="creartransaccion" action="#" class="box2 transaccioncontenedor pop" method="post">
+        <div class="datos-head">
+          <span class="span">✖</span>
+          <div class="img-movimiento"></div>
+          <p class="titulotransaccion">registrar movimientos</p>
+          <li id="m17"><label for="">No documento:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+          <li id="m18"><label for="">fecha:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+          <li id="m19"><label for="">doc ref:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+          
+        </div>
+        <div class="datos-insert">
+       <li id="t1"><label for="">Tipo:</label>
+       <input id="tidentificacion" list="tipo_identificacion" name="tipo_identificacion" class="input-orange"  placeholder="(ejem)NIT,CC,CE.OTRO">
+      <li id="m2"><label for="">identificacion:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m3"><label for="">razon social:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m4"><label for="">apellidos:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m5"><label for="">direccion:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m6"><label for="">telefono:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m7"><label for="">correo:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m8"><label for="">Telefono2:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+      <li id="m9"><label for="">observaciones:</label><br><input class="m9" id="Telefono2" type="text"   name="telefono2"></li>
+      </div>
+      <div class="titulotransaccion2">
+         <p>agregar producto</p>
+         <button type="button"  class="btn" id="apbtn">agregar</button>
+      </div> 
+      <div class="datos-insert2">
+       <li id="m10"><label for="">codigo:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+       <li id="m11"><label for="">nombre:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+       <li id="m12"><label for="">marca:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+       <li id="m13"><label for="">cantidad:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+       <li id="m14"><label for="">und/medida:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+       <li id="m15"><label for="">precio compra:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+       <li id="m16"><label for="">iva:</label><br><input id="Telefono2" type="text"   name="telefono2"></li>
+         </div>
+        <div class="inserttabla">
+          <table class="container">
+            <thead>
+              <tr>
+                <th><h1>codigo</h1></th>
+                <th><h1>nombre</h1></th>
+                <th><h1>marca</h1></th>
+                <th><h1>ref/adicional</h1></th>
+                <th><h1>cantidad</h1></th>
+                <th><h1>und/medida</h1></th>
+                <th><h1>iva</h1></th>
+                <th><h1>precio compra</h1></th>
+              </tr>
+            </thead>
+            <tbody id="tablamovimiento">
+              <tr>
+                <td>nit</td>
+                <td>1234567</td>
+                <td>para pruebas pop</td>
+                <td>pop-up</td>
+                <td>calle pop-up no 123</td>
+                <td>32222344</td>
+                <td>343456453</td>
+                <td>correofalso@email.com</td>
+          </tr>
+          <tr>
+            <td>nit</td>
+            <td>1234567</td>
+            <td>para pruebas pop</td>
+            <td>pop-up</td>
+            <td>calle pop-up no 123</td>
+            <td>32222344</td>
+            <td>343456453</td>
+            <td>correofalso@email.com</td>
+      </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="datos-footer">
+        <input type="button" value="guardar" class="btn tbtn" id="tbtn_1">
+        <input type="reset" value="nuevo" class="btn tbtn">
+        <input type="button" value="editar" class="btn tbtn" id="tbtn_3">  
+        </div>
+       </form>
+    </div>
+    </section>
+    <div id="toast"></div>
+    <script  src="/js/navegador.js"></script>
+    <script   src="/js/ajax.js"></script>
+    <script src="/js/bloqueo_input.js"></script>
+</body>
+</html>

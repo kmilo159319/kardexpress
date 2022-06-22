@@ -1,0 +1,63 @@
+.encabezado{
+    position: relative;
+    background: var(--color8);
+    border: none;
+    margin: 0;
+    box-shadow: 0 .1rem .6rem rgba(0, 0, 0, 0.479);
+}
+
+
+.informacion{
+    align-items: center !important;
+    text-align: center !important;
+    width: 70% !important;
+    left: 6.3% !important;
+    position: relative !important;
+    display:grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(14,10%) !important;
+}
+
+.informacion P{
+
+    color: var(--color4);
+    position: relative;
+    top: 0%;
+    padding:12%;
+}
+
+
+.btnsalir{
+font-size: 14px !important;
+margin: 0% !important;
+height: 100% !important;
+width: 100% !important;
+
+}
+
+
+
+.brbtn{
+    margin: 0% !important;
+    height: 85% !important;
+    grid-column: 13 / span 1 !important;
+  }
+
+  #brtexto2{
+    font-size: 12px !important;
+    grid-column: 10 / span 1 !important;
+  }
+
+
+  #brtexto3{
+    font-size: 12px !important;
+    grid-column: 12 / span 1 !important;
+  }
+
+  #p11{
+      grid-column:  span 2 !important;
+  }
+
+  .p11{
+    width:100% !important;
+  }
